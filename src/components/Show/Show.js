@@ -8,8 +8,6 @@ class Show extends Component {
     }
 
     componentDidUpdate(prevProps,prevState){
-        console.log(prevProps,prevState);
-        console.log(this.props,this.state);
         if (prevProps.showId !== this.props.showId){
            getShowInfo(this.props.showId).then(film=>this.setState({data:film}));
         }      
